@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/inib/testapp.git"
   },
+  "dependencies" : {  
+    "express" : "*"    
+  },
   "author": "inib",
   "license": "ISC",
   "bugs": {
