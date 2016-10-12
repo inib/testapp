@@ -25,12 +25,11 @@
   deploy : {
     production : {
       user : "nodeapp",
-      host : "212.144.102.216",
-      port : "22",   
+      host : "212.144.102.216",         
       key  : "nodeapp",
       ref  : "origin/master",
       repo : "git@github.com:inib/testapp.git",
-      path : "/srv/www/prod",
+      path : "/srv/www/testapp/prod",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
     },
     stage : {
@@ -39,7 +38,7 @@
       key  : "nodeapp",
       ref  : "origin/stage",
       repo : "git@github.com:inib/testapp.git",
-      path : "/srv/www/stage",
+      path : "/srv/www/testapp/stage",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env dev",
       env  : {
         NODE_ENV: "dev"
