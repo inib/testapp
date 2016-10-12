@@ -57,6 +57,7 @@ nodeapp
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
+.ssh
 
 # Directories potentially created on remote AFP share
 .AppleDB
