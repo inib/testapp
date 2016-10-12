@@ -3,17 +3,17 @@
    * Application configuration section
    * http://pm2.keymetrics.io/docs/usage/application-declaration/
    */
-  apps : [
+  "apps": [
 
     // First application
     {
-      name      : "testapp",
-      script    : "app.js",
-      env: {
-        COMMON_VARIABLE: "true"
+      "name": "testapp",
+      "script": "app.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
       },
-      env_production : {
-        NODE_ENV: "production"
+      "env_production" : {
+        "NODE_ENV": "production"
       }
     }
   ],
@@ -22,26 +22,26 @@
    * Deployment section
    * http://pm2.keymetrics.io/docs/usage/deployment/
    */
-  deploy : {
-    production : {
-      user : "nodeapp",
-      host : "212.144.102.216",         
-      key  : "M:/Users/Korbinian/.ssh/nodeapp.pem",
-      ref  : "origin/master",
-      repo : "git@github.com:inib/testapp.git",
-      path : "/srv/www/testapp/prod",
-      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
+  "deploy": {
+    "production": {
+      "user": "nodeapp",
+      "host": "212.144.102.216",         
+      "key": "M:/Users/Korbinian/.ssh/nodeapp.pem",
+      "ref": "origin/master",
+      "repo": "git@github.com:inib/testapp.git",
+      "path": "/srv/www/testapp/prod",
+      "post-deploy": "npm install && pm2 startOrRestart ecosystem.json --env production"
     },
-    stage : {
-      user : "nodeapp",
-      host : "212.144.102.216",      
-      key  : "M:/Users/Korbinian/.ssh/nodeapp.pem",
-      ref  : "origin/stage",
-      repo : "git@github.com:inib/testapp.git",
-      path : "/srv/www/testapp/stage",
+    "stage": {
+      "user": "nodeapp",
+      "host": "212.144.102.216",
+      "key": "M:/Users/Korbinian/.ssh/nodeapp.pem",
+      "ref": "origin/stage",
+      "repo": "git@github.com:inib/testapp.git",
+      "path": "/srv/www/testapp/stage",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env dev",
-      env  : {
-        NODE_ENV: "dev"
+      "env": {
+        "NODE_ENV": "dev"
       }
     }
   }
