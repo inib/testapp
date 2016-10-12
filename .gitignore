@@ -49,6 +49,7 @@ jspm_packages
 
 # pm2 eco
 ecosystem.json
+nodeapp
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
