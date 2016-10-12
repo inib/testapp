@@ -36,7 +36,7 @@
       "user": "nodeapp",
       "host": "212.144.102.216",
       "key": ".ssh/nodeapp.pem",
-      "ref": "origin/stage",
+      "ref": "origin/master",
       "repo": "git@github.com:inib/testapp.git",
       "path": "/srv/www/testapp/stage",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env dev",
