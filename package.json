@@ -10,13 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/inib/testapp.git"
   },
-  "dependencies" : {  
-    "express" : "*"    
+  "dependencies": {
+    "express": "*"
   },
   "author": "inib",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/inib/testapp/issues"
   },
-  "homepage": "https://github.com/inib/testapp#readme"
+  "homepage": "https://github.com/inib/testapp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }

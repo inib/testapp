@@ -25,8 +25,9 @@
   "deploy": {
     "production": {
       "user": "nodeapp",
-      "host": "212.144.102.216",         
-      "key": ".ssh/nodeapp.pem",
+      "host": "m1nebot.tk",         
+      "key": "/.ssh/nodeapp.pem",
+      "ssh_options": ["StrictHostKeyChecking=no", "PasswordAuthentication=no"],
       "ref": "origin/master",
       "repo": "git@github.com:inib/testapp.git",
       "path": "/srv/www/testapp/prod",
@@ -34,14 +35,15 @@
     },
     "stage": {
       "user": "nodeapp",
-      "host": "212.144.102.216",
-      "key": ".ssh/nodeapp.pem",
+      "host": "m1nebot.tk",
+      "key": "/.ssh/nodeapp.pem",
+      "ssh_options": ["StrictHostKeyChecking=no", "PasswordAuthentication=no"],
       "ref": "origin/master",
       "repo": "git@github.com:inib/testapp.git",
       "path": "/srv/www/testapp/stage",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env dev",
       "env": {
-        "NODE_ENV": "dev"
+        "NODE_ENV": "staging"
       }
     }
   }
